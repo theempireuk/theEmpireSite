@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>theEmpire</title>
+
+    <!-- Our things -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- Peoples things -->
+    <link rel="stylesheet" href="./styles/stars.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="continue" style="opacity: 0;">
+      <a href="#process" name="continue" onclick="cycleContinue()">Continue...</a>
+    </div>
+
+    <div id="landing" class="section star-div-left">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+
+      <!-- div content-->
+      <img src="./assets/logo.svg" alt="logo" data-tilt data-tilt-max="20" data-tilt-glare data-tilt-max-glare="0.5">
+      <h1 class="white">theEmpire</h1>
+      <h2 class="teal">we make <span id="term" class="white" onload="cycleTerms()">galactic </span>webapps</h2>
+    </div>
+
+    <div id="process" class="section star-div-right">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      <div class="planet-left"></div>
+
+      <!-- div content -->
+      <h1>Planet Process</h1>
+    </div>
+
+    <div id="team" class="section star-div-left">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      <div class="planet-right"></div>
+
+      <!-- div content -->
+      <h1>Planet Process</h1>
+    </div>
+
+    <footer>
+      This is a footer
+    </footer>
+
+    <!--scripts -->
+    <!-- Our things -->
+    <script type="text/javascript">
+      function navSelect() {
+        var navLinks = document.getElementsByClassName("nav-link")
+        navLinks[0].classList.remove("active")
+        navLinks[1].classList.remove("active")
+        navLinks[2].classList.remove("active")
+        event.target.classList.add("active")
+      }
+    </script>
+    <script src="./scripts/landing.js"></script>
+
+
+    <!-- Peoples things -->
+    <script type="text/javascript" src="./scripts/vanilla-tilt.js"></script>
+
+  </body>
+</html>
