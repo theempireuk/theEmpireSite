@@ -1,10 +1,8 @@
 // term cyler and button loader for landing splash
 terms = [
   "lightspeed ",
-  "data-driven ",
   "stellar ",
-  "reactive ",
-  "really good static "
+  "epic "
 ]
 i = 0
 
