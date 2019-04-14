@@ -1,24 +1,19 @@
 /* Element stylings */
-html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; height: 100vh; width: 100vw; scroll-behavior: smooth; }
-h1 { font-size: 10em; margin: 20px; }
-h2, h3, h4 { font-size: 4em; margin: 5px; }
+html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; min-height: 100vh; min-width: 100vw; scroll-behavior: smooth; color: white; }
+h1 { font-size: 48px; margin: 10px; }
+h2, h3, h4 { font-size: 32px; margin: 5px; }
 a { text-decoration: none; color: white; }
-img { width: 22em; }
+img { width: 200px; }
 
 
 /* Stylie things */
 .white { color: #fff; }
 .teal { color: #008B8B; }
 .red { color: #7e1416; }
-.section {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+.section { height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.section-content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .container { max-width: 800px; margin-left: auto; margin-right: auto; padding: 10px; }
+.line-left { margin-right: 40%; }
 
 
 /* desktop adjustments */
@@ -31,12 +26,8 @@ img { width: 22em; }
 
 
 /* individual stylings */
-
 #continue {
-  position: fixed;
-  width: 140px;
-  bottom: 6em;
-  left: calc(50vw - 70px);
+  margin-bottom: 40px;
   color: white;
 }
-#continue a { font-size: 20px; padding: 15px; border-bottom: solid; border-left: solid; border-radius: 40px; border-color: #7e1416; }
+#continue a { font-size: 20px; padding: 10px; border-top: solid; border-bottom: solid; border-radius: 5px; border-color: #7e1416; }

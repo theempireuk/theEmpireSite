@@ -13,42 +13,64 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   </head>
+
   <body>
 
-    <div id="continue" style="opacity: 0;">
-      <a href="#process" name="continue" onclick="cycleContinue()">Continue...</a>
-    </div>
 
     <div id="landing" class="section star-div-left">
+
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
 
-      <!-- div content-->
-      <img src="./assets/logo.svg" alt="logo" data-tilt data-tilt-max="20" data-tilt-glare data-tilt-max-glare="0.5">
-      <h1 class="white">theEmpire</h1>
-      <h2 class="teal">we make <span id="term" class="white" onload="cycleTerms()">galactic </span>webapps</h2>
+      <div class="section-content">
+        <img src="./assets/pangeaEmpire.png" alt="logo" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
+        <h1 class="white">theEmpire</h1>
+        <h2 class="teal">we make <span id="term" class="red" onload="cycleTerms()"></span>webapps</h2>
+      </div>
+
+      <div id="continue" style="opacity: 0;">
+        <a href="#process" name="continue">Continue...</a>
+      </div>
+
     </div>
+
 
     <div id="process" class="section star-div-right">
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
-      <div class="planet-left"></div>
 
-      <!-- div content -->
-      <h1>Planet Process</h1>
+      <div class="section-content">
+        <div class="planet-left">
+          <h1>Planet Process</h1>
+          <hr class="line-left">
+        </div>
+      </div>
+
+      <div id="continue">
+        <a href="#apps" name="apps">App Station...</a>
+      </div>
     </div>
 
-    <div id="team" class="section star-div-left">
+
+    <div id="apps" class="section star-div-left">
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
-      <div class="planet-right"></div>
 
-      <!-- div content -->
-      <h1>Planet Process</h1>
+      <div id="planet-right">
+        <div class="section-content">
+          <h1>App Station</h1>
+          <hr>
+        </div>
+      </div>
+
+      <div id="continue">
+        <a href="#team" name="team">Team Hub...</a>
+      </div>
     </div>
+
 
     <!--scripts -->
     <!-- Our things -->

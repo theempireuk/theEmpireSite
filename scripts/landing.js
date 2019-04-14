@@ -1,5 +1,6 @@
 // term cyler and button loader for landing splash
 terms = [
+  "galactic ",
   "lightspeed ",
   "stellar ",
   "epic "
@@ -15,10 +16,10 @@ var landingInterval = setInterval( function() {
     termTransition(i)
     i++
   } else {
-    fadeButton()
     clearInterval(landingInterval)
+    fadeButton()
   }
-}, 1500)
+}, 1000)
 
 // functions
 function termTransition(i) {
@@ -27,7 +28,7 @@ function termTransition(i) {
   term.textContent = terms[i]
   var fadeInterval = setInterval( function() {
     if (termOpacity >= 1) clearInterval(fadeInterval)
-    termOpacity += 0.05
+    termOpacity += 0.125
     term.style.opacity = termOpacity
   }, 50)
 }
@@ -36,7 +37,7 @@ function fadeButton() {
   let buttonOpacity = 0;
   var fadeInterval = setInterval( function() {
     if (buttonOpacity >= 1) clearInterval(fadeInterval)
-    buttonOpacity += 0.05
+    buttonOpacity += 0.125
     continueButton.style.opacity = buttonOpacity
   }, 50)
 }
