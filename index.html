@@ -10,31 +10,29 @@
 
     <!-- Peoples things -->
     <link rel="stylesheet" href="./styles/stars.css">
+    <link rel="stylesheet" href="./styles/speechbubbles.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   </head>
-
   <body>
 
-
     <div id="landing" class="section star-div-left">
-
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
 
       <div class="section-content">
         <img src="./assets/pangeaEmpire.png" alt="logo" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5">
-        <h1 class="white">theEmpire</h1>
-        <h2 class="teal">we make <span id="term" class="red" onload="cycleTerms()"></span>webapps</h2>
+        <div id="landing-text" style="opacity: 0;">
+          <h1 class="white">theEmpire</h1>
+          <h2 class="grey">we make <span id="term" class="white" onload="cycleTerms()"></span>webapps</h2>
+        </div>
       </div>
 
       <div id="continue" style="opacity: 0;">
         <a href="#process" name="continue">Continue...</a>
       </div>
-
     </div>
-
 
     <div id="process" class="section star-div-right">
       <div id='stars'></div>
@@ -43,26 +41,84 @@
 
       <div class="section-content">
         <div class="planet-left">
-          <h1>Planet Process</h1>
+          <h1>Planet KZ8-V0H</h1>
           <hr class="line-left">
+
+          <div class="container">
+            <div id="tooltip-area" class="speech-bubble" style="opacity: 0;"></div>
+            <h2 class="subheading-left">The Intergalactic Webstack</h2>
+            <p class="lightgrey">
+              Our scientists employ the <span class="white">hottest tools </span>in the web universe to rapidly build <span class="white">lightning fast, data-driven apps.</span><br><br>
+            </p>
+            <ul class="tool-graphics">
+              <li>
+                <a id="react-anchor"  onmouseover="displayTooltip('react')">
+                  <img src="./assets/react.png" alt="react">
+                </a>
+              </li>
+              <li>
+                <a id="node-anchor" onmouseover="displayTooltip('node')">
+                  <img src="./assets/nodejs.png" alt="node.js">
+                </a>
+              </li>
+              <li>
+                <a id="html5-anchor" onmouseover="displayTooltip('html5')">
+                  <img src="./assets/html5.png" alt="html5">
+                </a>
+              </li>
+              <li>
+                <a id="mongodb-anchor" onmouseover="displayTooltip('mongodb')">
+                  <img src="./assets/mongodb.png" alt="mongodb">
+                </a>
+              </li>
+              <li>
+                <a id="docker-anchor" onmouseover="displayTooltip('docker')">
+                  <img src="./assets/docker.png" alt="docker">
+                </a>
+              </li>
+              <li>
+                <a id="netlify-anchor" onmouseover="displayTooltip('netlify')">
+                  <img src="./assets/netlify.png" alt="netlify">
+                </a>
+              </li>
+              <li>
+                <a id="gcp-anchor" onmouseover="displayTooltip('gcp')">
+                  <img src="./assets/gcp.png" alt="google cloud services">
+                </a>
+              </li>
+            </ul>
+            <p class="middle lightgrey">
+              Lying at the core is <span class="white">business-led</span> app design. They don't just look pretty, they <span class="white">make you money.</span>
+            </p>
+          </div>
         </div>
       </div>
 
       <div id="continue">
-        <a href="#apps" name="apps">App Station...</a>
+        <a href="#apps" name="apps">Our Apps...</a>
       </div>
     </div>
-
 
     <div id="apps" class="section star-div-left">
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
 
-      <div id="planet-right">
-        <div class="section-content">
+      <div class="section-content">
+        <div class="planet-right">
           <h1>App Station</h1>
-          <hr>
+          <hr class="line-right">
+          <ul>
+            <li class="right">
+              App #1
+            </li>
+            <li>
+              App #2
+            </li>
+            <li class="left">
+              App #3
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -71,20 +127,11 @@
       </div>
     </div>
 
-
     <!--scripts -->
     <!-- Our things -->
-    <script type="text/javascript">
-      function navSelect() {
-        var navLinks = document.getElementsByClassName("nav-link")
-        navLinks[0].classList.remove("active")
-        navLinks[1].classList.remove("active")
-        navLinks[2].classList.remove("active")
-        event.target.classList.add("active")
-      }
-    </script>
+    <script src="./scripts/nav.js"></script>
     <script src="./scripts/landing.js"></script>
-
+    <script src="./scripts/tooltips.js"></script>
 
     <!-- Peoples things -->
     <script type="text/javascript" src="./scripts/vanilla-tilt.js"></script>

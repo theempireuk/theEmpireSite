@@ -9,19 +9,35 @@ i = 0
 
 var term = document.getElementById("term")
 var continueButton = document.getElementById("continue")
+var landingText = document.getElementById("landing-text")
 
-var landingInterval = setInterval( function() {
-  if (i < terms.length) {
-    term.style.opacity = 0
-    termTransition(i)
-    i++
-  } else {
-    clearInterval(landingInterval)
-    fadeButton()
-  }
-}, 1000)
+var landingDelay = setTimeout( function() {
+  // fade in text
+  fadeText()
+
+  // start term fades
+  var landingInterval = setInterval( function() {
+    if (i < terms.length) {
+      term.style.opacity = 0
+      termTransition(i)
+      i++
+    } else {
+      clearInterval(landingInterval)
+      fadeButton()
+    }
+  }, 1000)
+}, 500)
 
 // functions
+function fadeText() {
+  let textOpacity = 0;
+  var fadeInterval = setInterval( function() {
+    if (textOpacity >= 1) clearInterval(fadeInterval)
+    textOpacity += 0.05
+    landingText.style.opacity = textOpacity
+  }, 50)
+}
+
 function termTransition(i) {
   let termOpacity = 0;
   let intervalTimer = 0;
