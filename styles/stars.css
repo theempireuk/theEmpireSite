@@ -9,27 +9,30 @@
 }
 
 .planet-left {
-  height: 60vw;
-  width: 190vw;
-  background-image: url('../assets/pangeaEmpire.png');
-  background-position: left;
+  width: 100%;
+  height: 200px;
+  background-image: url('../assets/logo.png');
+  background-position: top left;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .planet-right {
-  height: 60vw;
-  width: 190vw;
-  background-image: url('../assets/pangeaEmpire.png');
-  background-position: right;
+  width: 100%;
+  height: 200px;
+  background-image: url('../assets/logo.png');
+  background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.line-left { margin-right: 40%; margin-left: 15%; margin-bottom: 100px; }
+.line-right { margin-left: 40%; margin-right: 15%; margin-bottom: 100px; }
+
 /* desktop adjustments */
 @media only screen and (min-width: 900px) {
-  .planet-left { height: 30vw; width: 140vw; }
-  .planet-right { height: 30vw; width: 140vw; }
+  /*.planet-left { height: 30vw; width: 140vw; }
+  .planet-right { height: 30vw; width: 140vw; }*/
 }
 
 #stars {

@@ -7,16 +7,17 @@
 }
 
 .speech-bubble:after {
-  content: '';
+	content: '';
 	position: absolute;
-	left: 0;
-	top: 50%;
+	top: 0;
+	left: 15%;
 	width: 0;
 	height: 0;
-	border: 0.813em solid transparent;
-	border-right-color: #444;
+	border: 20px solid transparent;
+	border-bottom-color: #444;
+	border-top: 0;
 	border-left: 0;
-	margin-top: -0.812em;
-	margin-left: -0.812em;
+	margin-left: -10px;
+	margin-top: -20px;
 }
 }
