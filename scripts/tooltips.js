@@ -11,7 +11,7 @@ var tooltips = {
 }
 
 function displayTooltip(tooltip) {
-  if (tooltipArea.style.opacity > 0) return
+  // if (tooltipArea.style.opacity > 0) return
   tooltipArea.style.opacity = 0
 
   // set text content according to corresponding icon hover
@@ -31,7 +31,7 @@ function displayTooltip(tooltip) {
 
   var disappearDelay = setTimeout( function() {
     disappear()
-  }, 5000)
+  }, 120000)
 }
 
 function disappear() {

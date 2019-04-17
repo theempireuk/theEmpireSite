@@ -47,10 +47,8 @@ img { width: 200px; }
 #tooltip-area a { text-decoration: underline; }
 #tooltip-area p { margin-bottom: 10px; margin-left: 10px; margin-right: 10px; }
 
-#apps ul { flex-direction: column; justify-content: space-between; width: 50%; }
-#apps h2 { width: 90%; text-align: left; text-decoration: underline; }
-#app-list { margin-top: 20vw;}
-#app-list .app { margin-top: 10vw; margin-bottom: 10vw; }
-#app-1 { position: relative; bottom: 0px; }
-#app-2 { position: relative; bottom: 50px; }
-#app-3 { position: relative; bottom: 100px; }
+#apps ul { width: 100%; flex-direction: column; justify-content: space-between; align-items: flex-start; }
+#apps .app-1 { margin-left: 20%; }
+#apps .app-2 { margin-left: 40%; }
+#apps .app-3 { margin-left: 60%; }
+#apps .planet { margin-left: 80%; }
