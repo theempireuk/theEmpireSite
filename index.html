@@ -45,8 +45,9 @@
           <hr class="line-left">
         </div>
 
+        <div id="tooltip-area" class="speech-bubble" style="opacity: 0;"></div>
+
         <div class="container">
-          <div id="tooltip-area" class="speech-bubble" style="opacity: 0;"></div>
           <h1 class="subheading-left">The Intergalactic Webstack</h1>
           <p class="lightgrey">
             Our engineers employ the <span class="white">hottest tools </span>in the web universe to rapidly build <span class="white">lightning fast, data-driven apps.</span><br><br>
@@ -105,19 +106,19 @@
       <div id='stars3'></div>
 
       <div class="section-content">
-        <h1>Apps in Orbit</h1>
+        <h1>Apps we've launched to Orbit:</h1>
         <ul>
-          <li class="app-1">
-            <h2>App #1</h2>
-          </li>
-          <li class="app-2">
-            <h2>App #2</h2>
-          </li>
-          <li class="app-3">
-            <h2>App #3</h2>
-          </li>
-          <li class="planet">
-            <img src="./assets/logo.png" alt="pangea-empire-logo">
+          <li>
+            <img src="./assets/satellite.png" alt="hytch-satellite">
+            <div class="app-info">
+              <a href="#apps" onmouseover="highlight()" onmouseout="unhighlight()">
+                <h2>Hytch </h2>
+              </a>
+              <hr>
+              <p>
+                Discover, share and decide upon date ideas by region in London.
+              </p>
+            </div>
           </li>
         </ul>
       </div>
@@ -132,6 +133,7 @@
     <script src="./scripts/nav.js"></script>
     <script src="./scripts/landing.js"></script>
     <script src="./scripts/tooltips.js"></script>
+    <script src="./scripts/apps.js"></script>
 
     <!-- Peoples things -->
     <script type="text/javascript" src="./scripts/vanilla-tilt.js"></script>

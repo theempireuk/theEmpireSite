@@ -1,12 +1,11 @@
 /* Element stylings */
 html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; min-height: 100vh; min-width: 100vw; scroll-behavior: smooth; color: white; }
-h1 { font-size: 48px; margin: 10px; }
-h2, h3, h4 { font-size: 32px; margin: 10px; }
+h1 { font-size: 48px; }
+h2, h3, h4 { font-size: 32px; }
 p { text-align: center; margin: 0px; text-align: left; }
 a { text-decoration: none; color: white; }
 ul { margin: 0px; padding: 0px; list-style-type: none; display: flex; flex-wrap: wrap; justify-content: center; }
 li { padding: 20px; }
-img { width: 200px; }
 
 
 /* Stylie things */
@@ -28,7 +27,6 @@ img { width: 200px; }
   h1 { font-size: 48px; }
   h2 { font-size: 32px; }
   h3, h4 { font-size: 24px; }
-  img { width: 200px; }
 }
 
 
@@ -40,15 +38,16 @@ img { width: 200px; }
 #continue a { font-size: 20px; padding: 10px; border-top: solid; border-bottom: solid; border-radius: 5px; border-color: #ab1b1e; }
 #continue a:hover, a:focus { color: #777; }
 
+#landing img { max-width: 400px; }
+
 #process img { width: 75px; padding: 2px; }
-#process ul { margin-bottom: 20px;}
+#process ul { margin-bottom: 20px; }
 #process li { padding: 15px; text-align: center; }
 #process .speech-bubble { padding: 10px; }
 #tooltip-area a { text-decoration: underline; }
 #tooltip-area p { margin-bottom: 10px; margin-left: 10px; margin-right: 10px; }
 
-#apps ul { width: 100%; flex-direction: column; justify-content: space-between; align-items: flex-start; }
-#apps .app-1 { margin-left: 20%; }
-#apps .app-2 { margin-left: 40%; }
-#apps .app-3 { margin-left: 60%; }
-#apps .planet { margin-left: 80%; }
+#apps ul { flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+#apps li { display: flex; justify-content: center; flex-wrap: wrap; text-align: left; }
+#apps img { max-height: 500px; }
+#apps .app-info { display: flex; flex-direction: column; justify-content: center; }
