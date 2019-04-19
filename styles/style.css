@@ -5,7 +5,7 @@ h2 { font-size: 32px; }
 h3, h4 { font-size: 28px; }
 p { text-align: center; margin: 0px; text-align: left; }
 a { text-decoration: none; color: white; }
-ul { margin: 0px; padding: 0px; list-style-type: none; display: flex; flex-wrap: wrap; justify-content: center; }
+ul { margin: 0px; padding: 0px; list-style-type: none; display: flex; flex-wrap: wrap; }
 li { padding: 20px; }
 
 
@@ -42,15 +42,16 @@ li { padding: 20px; }
 #landing img { max-width: 400px; }
 
 #process img { width: 75px; padding: 2px; }
-#process ul { margin-bottom: 20px; }
+#process ul { margin-bottom: 20px; justify-content: center; }
 #process li { padding: 15px; text-align: center; }
 #process .speech-bubble { padding: 10px; }
 #tooltip-area a { text-decoration: underline; }
 #tooltip-area p { margin-bottom: 10px; margin-left: 10px; margin-right: 10px; }
 
-#apps ul { flex-direction: column; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-#apps li { display: flex; justify-content: center; flex-wrap: wrap; text-align: left; }
-#apps li h2 { text-decoration: underline; }
-#apps li h2, h3 { margin: 0px; }
 #apps img { height: 25em; max-height: 500px; }
-#apps .app-info { display: flex; flex-direction: column; justify-content: space-between; }
+#app { display: flex; flex-wrap: wrap; justify-content: center; }
+#app .app-info { margin-top: auto; margin-bottom: auto; max-width: 600px; text-align: left; }
+#app h2 { margin: 0px; margin-bottom: 5px; text-decoration: underline; }
+#app h4 { margin-top: 20px; margin-bottom: 10px; }
+#apps .app-scroll-buttons { display: flex; justify-content: center; }
+#apps .app-scroll-buttons * { padding: 30px; font-weight: bold; font-size: 40px; }

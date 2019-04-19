@@ -107,30 +107,23 @@
 
       <div class="section-content">
         <h1>Apps we've launched into Orbit:</h1>
-        <ul>
-          <li>
-            <img src="./assets/satellite.png" alt="hytch-satellite">
-            <div class="app-info">
-              <div>
-                <a href="#apps" target="_blank" onmouseover="highlight()" onmouseout="unhighlight()">
-                  <h2>Hytch </h2>
-                </a>
-                <p>Discover, share and decide upon date ideas by region in London.</p>
-              </div>
-              <div>
-                <h3 class="grey">Mission</h3>
-                <p>Discover, share and decide upon date ideas by region in London.</p>
-              </div>
-              <div>
-                <h3 class="grey">Development</h3>
-                <p>Discover, share and decide upon date ideas by region in London.</p>
-              </div>
-              <div>
-                <p>Discover, share and decide upon date ideas by region in London.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+
+        <div id="app">
+          <img id="app-img" src="" alr="app-image">
+          <div class="app-info">
+            <h2 id="app-name"></h2>
+            <p id="app-desc" class="grey"></p>
+            <h4>Brief:</h4>
+            <p id="app-brief" class="grey"></p>
+            <h4>Built with:</h4>
+            <p id="app-builtWith" class="grey"></p>
+          </div>
+        </div>
+
+        <div class="app-scroll-buttons">
+          <a href="#apps" onclick="previousApp()" onmouseover="highlight()" onmouseout="unhighlight()"><</a>
+          <a href="#apps" onclick="nextApp()" onmouseover="highlight()" onmouseout="unhighlight()">></a>
+        </div>
       </div>
 
       <div id="continue">
