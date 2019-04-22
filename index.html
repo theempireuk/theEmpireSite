@@ -11,23 +11,57 @@
     <!-- Peoples things -->
     <link rel="stylesheet" href="./styles/stars.css">
     <link rel="stylesheet" href="./styles/speechbubbles.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   </head>
   <body>
 
-    <div id="nav-menu">
-      <p>Ship Status: 100% | Nav Systems: Online</p>
-      <ul>
-        <li>
-          <div class="label" style="display: none;">
-            Home
-          </div>
-          <div class="selector">
-            &nbsp;
-          </div>
-        </li>
-      </ul>
+    <div id="nav">
+      <div class="row">
+        <p>Navigation Systems Status: 100% | Warp Drive: Online</p>
+        <button class="hamburger hamburger--squeeze is-active" type="button" onclick="toggleActive()">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <div id="nav-menu">
+        <ul>
+          <li>
+            <a href="#landing" onclick="navClick('landing')">
+              <p>Landing Site</p>
+              <div id='nav-icon-landing' class="nav-icon">
+                &nbsp;
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#process" onclick="navClick('process')">
+              <p>Investigate Technologies</p>
+              <div id='nav-icon-process' class="nav-icon">
+                &nbsp;
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#apps" onclick="navClick('apps')">
+              <p>Scan for Satellites</p>
+              <div id='nav-icon-apps' class="nav-icon">
+                &nbsp;
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onclick="navClick('contact')">
+              <p>Engage Communications</p>
+              <div id='nav-icon-contact' class="nav-icon">
+                &nbsp;
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div id="landing" class="section star-div-left">
@@ -110,7 +144,7 @@
       </div>
 
       <div id="continue">
-        <a href="#apps" name="apps">Launched Apps...</a>
+        <a href="#apps" name="apps" onclick="navClick('apps')">Launched Apps...</a>
       </div>
     </div>
 
@@ -120,7 +154,7 @@
       <div id='stars3'></div>
 
       <div class="section-content">
-        <h1>Apps we've launched into Orbit:</h1>
+        <h1>Apps launched into Orbit:</h1>
 
         <div id="app" class="transition">
           <img id="app-img" src="" alr="app-image">
@@ -134,7 +168,7 @@
             <h4>Testimonial:</h4>
             <p id="app-testimonial" class="grey"></p>
             <br>
-            <a id="app-link" href="#" target="_blank"><strong>See it live!</strong></a>
+            <a id="app-link" href="#" target="_blank"><strong style="font-size: 20px; text-decoration: underline;">Try it out!</strong></a>
           </div>
         </div>
 
@@ -145,7 +179,7 @@
       </div>
 
       <div id="continue">
-        <a href="#contact" name="contact">Begin Transmission...</a>
+        <a href="#contact" name="contact" onclick="navClick('contact')">Begin Transmission...</a>
       </div>
     </div>
 
