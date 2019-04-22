@@ -60,6 +60,7 @@ li { padding: 20px; }
 #tooltip-area a { text-decoration: underline; }
 #tooltip-area p { margin-bottom: 10px; margin-left: 10px; margin-right: 10px; }
 
+#apps h1 { align-self: flex-start; }
 #apps img { height: 25em; max-height: 500px; }
 #apps .app-scroll-buttons { display: flex; justify-content: center; }
 #apps .app-scroll-buttons * { padding: 30px; font-weight: bold; font-size: 40px; }
@@ -68,3 +69,8 @@ li { padding: 20px; }
 #app h2 { margin: 0px; margin-bottom: 5px; text-decoration: underline; }
 #app h4 { margin-top: 20px; margin-bottom: 10px; }
 #app a:hover { color: #777; }
+
+#contact .section-content { align-items: flex-start; }
+#contact p { margin: 10px; }
+#contact a { align-self: center; text-decoration: underline; }
+#contact a:hover { color: #777; }

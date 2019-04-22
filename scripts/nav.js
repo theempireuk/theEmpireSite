@@ -20,6 +20,4 @@ function navClick(selection) {
   if (selection === 'process') processIcon.classList.add('selected')
   if (selection === 'apps') appsIcon.classList.add('selected')
   if (selection === 'contact') contactIcon.classList.add('selected')
-
-  console.log(landingIcon, processIcon, appsIcon, contactIcon)
 }
