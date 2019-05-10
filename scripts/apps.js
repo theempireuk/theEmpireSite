@@ -1,36 +1,27 @@
 var apps = [
   {
-    name: "Hytch",
-    description: "Find, share and decide upon dates in London by region.",
-    brief: "Make a simple, pretty and mobile-optimised frontend app for the clients customers. Also, make an intuitive backend CMS and for the client to add dates and track date metrics.",
+    name: "Dubzoo",
+    description: "Social analytics tool for creatives, managers and agencies.",
+    brief: "Build a platform for users to track and manage their own/clients social accounts in one place.",
     builtWith: "React, Node.js. Hosted on Netlify and Heroku.",
-    testimonial: "Good squad",
-    href: "https://www.hytch.com",
-    imgSrc: "assets/satellite.png"
+    testimonial: "\"The team not only built what we asked them to but provided us with invaluable technical insights that allowed us to improve our product together. On top of that they employed best practises for hosting and security meaning that our app is scalable and quick while being data intensive.\"",
+    href: "https://dubzoo.netlify.com",
+    imgSrc: "assets/Dubzoo.gif"
   },
   {
     name: "Cognitant",
-    description: "Find, share and decide upon dates in London by region.",
-    brief: "Make a simple, pretty and mobile-optimised frontend app for the clients customers. Also, make an intuitive backend CMS and for the client to add dates and track date metrics.",
-    builtWith: "React, Node.js. Hosted on Netlify and Heroku.",
-    testimonial: "Good squad",
-    href: "https://www.hytch.com",
-    imgSrc: "assets/satellite.png"
-  },
-  {
-    name: "Dubzoo",
-    description: "Find, share and decide upon dates in London by region.",
-    brief: "Make a simple, pretty and mobile-optimised frontend app for the clients customers. Also, make an intuitive backend CMS and for the client to add dates and track date metrics.",
-    builtWith: "React, Node.js. Hosted on Netlify and Heroku.",
-    testimonial: "Good squad",
-    href: "https://www.hytch.com",
-    imgSrc: "assets/satellite.png"
+    description: "Professional business app showcasing mission, products, team and inviting connections.",
+    brief: "Create a sophisticated, public-facing business app for a medical tech company.",
+    builtWith: "HTML, CSS, JS.",
+    testimonial: "\"We needed this turned around quickly for our upcoming events. The team went above and beyond to take our ideas and design snippets and rapidly build our new site. Will be working together again soon!\"",
+    href: "https://www.cognitant.com",
+    imgSrc: "assets/Cognitant.gif"
   }
 ]
 
 var selectedApp = 0
 var app = document.getElementById('app')
-var appImg = document.getElementById('app-img')
+var appPreview = document.getElementById('app-preview')
 var appName = document.getElementById('app-name')
 var appDesc = document.getElementById('app-desc')
 var appBrief = document.getElementById('app-brief')
@@ -73,7 +64,7 @@ unhighlight = () => {
 }
 
 displayApp = () => {
-  appImg.src = apps[selectedApp].imgSrc
+  appPreview.src = apps[selectedApp].imgSrc
   appName.textContent = apps[selectedApp].name
   appDesc.textContent = apps[selectedApp].description
   appBrief.textContent = apps[selectedApp].brief

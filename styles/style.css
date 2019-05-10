@@ -24,6 +24,8 @@ li { padding: 20px; }
 .middle { text-align: center; }
 .transition { transition: all .25s ease-in-out; }
 .hide { display: none; }
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.2); }
 
 
 /* desktop adjustments */
@@ -60,11 +62,12 @@ li { padding: 20px; }
 #tooltip-area a { text-decoration: underline; }
 #tooltip-area p { margin-bottom: 10px; margin-left: 10px; margin-right: 10px; }
 
+
 #apps h1 { align-self: flex-start; }
-#apps img { height: 25em; max-height: 500px; }
+#apps img { height: 25em; max-height: 500px; margin: 40px; }
 #apps .app-scroll-buttons { display: flex; justify-content: center; }
 #apps .app-scroll-buttons * { padding: 30px; font-weight: bold; font-size: 40px; }
-#app { display: flex; flex-wrap: wrap; justify-content: center; }
+#app { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
 #app .app-info { margin-top: auto; margin-bottom: auto; max-width: 600px; text-align: left; }
 #app h2 { margin: 0px; margin-bottom: 5px; text-decoration: underline; }
 #app h4 { margin-top: 20px; margin-bottom: 10px; }
