@@ -22,7 +22,7 @@ li { padding: 20px; }
 .subheading-left { text-align: left; margin-top: 20px; margin-bottom: 30px; }
 .highlighted { background-color: white; border-radius: 20px; }
 .middle { text-align: center; }
-.transition { transition: all .25s ease-in-out; }
+.transition { transition: all 0.25s ease-in-out; }
 .hide { display: none; }
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.2); }
@@ -33,6 +33,7 @@ li { padding: 20px; }
   h1 { font-size: 48px; }
   h2 { font-size: 32px; }
   h3, h4 { font-size: 24px; }
+  #continue { margin-bottom: 40px; }
 }
 
 
@@ -46,7 +47,7 @@ li { padding: 20px; }
 #nav-menu li .selected { background-color: #ab1b1e; }
 
 #continue {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   color: white;
 }
 #continue a { font-size: 20px; padding: 10px; border-top: solid; border-bottom: solid; border-radius: 5px; border-color: #ab1b1e; }
