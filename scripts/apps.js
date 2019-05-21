@@ -13,7 +13,7 @@ var apps = [
     description: "Professional business app showcasing mission, products, team and inviting connections.",
     brief: "Create a sophisticated, public-facing business app for a medical tech company.",
     builtWith: "HTML, CSS, JS.",
-    testimonial: "\"We needed this turned around quickly for our upcoming events. The team went above and beyond to take our ideas and design snippets and rapidly build our new site. Will be working together again soon!\"",
+    testimonial: "\"We needed this turned around quickly for our upcoming events. The team went above and beyond building what we needed by also hiding future features in our site that we can activate when we have the necessary information and resources.\"",
     href: "https://www.cognitant.com",
     imgSrc: "assets/Cognitant.gif"
   }
