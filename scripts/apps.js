@@ -4,7 +4,7 @@ var apps = [
     description: "Date idea inspiration for all areas of London. Uses native device browser APIs for sharing of links.",
     brief: "Build the MVP of this idea as a progressive webapp to test the market.",
     builtWith: "HTML, CSS, JS.",
-    testimonial: "\"Perfect. 🙏 Yung Neo killing it as per usual...\"",
+    testimonial: "\"Working with this team was a pleasure. They understood the brief and delivered this MVP faster than we expected. They used the appropriate technology for us to learn and grow, and gave us innovative solutions to challenges.\n\nWe loved working with them and will be using the team for all future upcoming projects.\"",
     href: "https://www.hytchdates.co",
     imgSrc: "assets/Hytch.png"
   },
