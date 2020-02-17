@@ -1,22 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-import { Link } from '../components/Router'
+import Link from '../components/Link'
+
+import s from '../styles/native/styles'
+const [layout, text] = [s.layout, s.text]
 
 export default function Home() {
     return (
-        <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-            <Link to="Contact">Contact!</Link>
+        <View style={[layout.fullScreen, layout.container]}>
+            <Text style={[text.default, text.title]}>Open up App.js to start working on your app!</Text>
+            <Link to="Contact">
+                <Text style={[text.default, text.link]}>Contact!</Text>
+            </Link>
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});

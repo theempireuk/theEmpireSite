@@ -1,10 +1,19 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { View, Text } from 'react-native'
+
+import Link from '../components/Link'
+
+import s from '../styles/native/styles'
+const [layout, text] = [s.layout, s.text]
+
 
 export default function Contact() {
     return (
-        <Text>
-            Contact me yo!
-        </Text>
+        <View style={[layout.fullScreen, layout.container]}>
+            <Text style={[text.default, text.title]}>Contact</Text>
+            <Link to="Home">
+                <Text style={[text.default, text.link]}>Return from whence you came!</Text>
+            </Link>
+        </View>
     )
 }

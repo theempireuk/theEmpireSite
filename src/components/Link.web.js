@@ -1,2 +1,2 @@
 import { Link } from 'gatsby'
-export { Link }
+export default Link
