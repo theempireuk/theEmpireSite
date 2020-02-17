@@ -1,10 +1,6 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-    fullScreen: {
-        height: '100vh',
-        width: '100vw',
-    },
     container: {
         flex: 1,
         backgroundColor: '#fff',

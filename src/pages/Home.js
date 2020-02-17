@@ -8,9 +8,9 @@ const [layout, text] = [s.layout, s.text]
 
 export default function Home() {
     return (
-        <View style={[layout.fullScreen, layout.container]}>
+        <View style={[layout.container]}>
             <Text style={[text.default, text.title]}>Open up App.js to start working on your app!</Text>
-            <Link to="Contact">
+            <Link style={{color: 'red'}} to="Contact">
                 <Text style={[text.default, text.link]}>Contact!</Text>
             </Link>
         </View>

@@ -2,11 +2,11 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     default: {
-        fontFamily: 'sans-serif',
+        fontFamily: 'Helvetica',
     },
     title: {
         fontSize: 32,
-        textDecorationLine: 'overline',
+        textDecorationLine: 'line-through',
     },
     link: {
         color: 'red',
