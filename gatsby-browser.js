@@ -1,1 +1,1 @@
-import "./src/styles/web/styles.css"
+import "./src/styles/web/gatsby.css"

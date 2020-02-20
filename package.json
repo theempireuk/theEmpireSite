@@ -12,9 +12,10 @@
     "@react-navigation/native": "^5.0.3",
     "@react-navigation/stack": "^5.0.3",
     "expo": "~36.0.0",
+    "expo-gl": "^8.0.0",
+    "expo-three": "^5.4.0",
     "gatsby": "^2.19.16",
     "gatsby-plugin-react-native-web": "^3.0.0-beta.7",
-    "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-hooks-global-state": "^1.0.0-alpha.2",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
@@ -22,7 +23,9 @@
     "react-native-reanimated": "~1.4.0",
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "react-three-fiber": "^4.0.17",
+    "three": "^0.113.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

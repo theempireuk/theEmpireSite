@@ -1,18 +1,17 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { View } from 'react-native'
 
-import Link from '../components/Link'
+import Space from '../components/Space'
 
 import s from '../styles/native/styles'
-const [layout, text] = [s.layout, s.text]
+const [layout] = [s.layout]
 
 export default function Home() {
+    const [section, setSection] = useState(0)
+
     return (
-        <View style={[layout.container, layout.fill]}>
-            <Text style={[text.default, text.title]}>Open up App.js to start working on your app!</Text>
-            <Link style={{color: 'red'}} to="Contact">
-                <Text style={[text.default, text.link]}>Contact!</Text>
-            </Link>
+        <View style={[layout.fill]}>
+            <Space section={section} setSection={setSection}/>
         </View>
     )
 }
