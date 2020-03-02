@@ -6,7 +6,7 @@ var apps = [
     builtWith: "HTML, CSS, JS.",
     testimonial: "\"Working with this team was a pleasure. They understood the brief and delivered this MVP faster than we expected. They used the appropriate technology for us to learn and grow, and gave us innovative solutions to challenges.\n\nWe loved working with them and will be using the team for all future upcoming projects.\"",
     href: "https://www.hytchdates.co",
-    imgSrc: "assets/Hytch.png"
+    imgSrc: "assets/hytch.png"
   },
   {
     name: "Cognitant",
