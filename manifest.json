@@ -1,0 +1,11 @@
+{
+    "name": "theEmpire",
+    "short_name": "theEmpire",
+    "description": "Intergalactic web & software services.",
+    "display": "standalone",
+    "icons": [{
+      "src": "logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }]
+  }

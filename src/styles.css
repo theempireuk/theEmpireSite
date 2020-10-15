@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  background: #0b0b12;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
+}
+
+#headline {
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#label {
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+#label h2 {
+  margin: 0;
+  padding: 50px 10px 5px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+#label h4 {
+  margin: 0;
+  padding: 5px 11px;
+}
