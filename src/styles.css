@@ -15,18 +15,24 @@ body,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: hidden;
   background: #0b0b12;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, */
+    /* sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
 }
+
+/* individual stylings */
+#nav { z-index: 2; position: fixed; top: 10px; right: 10px; display: flex; flex-direction: column; align-items: flex-end; }
+#nav-menu { display: flex; flex-direction: column; list-style-type: none; padding: 0; margin: 0; }
+#nav-menu h4, #nav-menu p { padding: 0px; margin: 10px; }
 
 #headline {
   z-index: 1;
-  color: white;
   position: absolute;
   top: 66%;
   left: 50%;
@@ -36,7 +42,6 @@ body {
 
 #label {
   z-index: 1;
-  color: white;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -51,4 +56,13 @@ body {
 #label h4 {
   margin: 0;
   padding: 5px 11px;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
