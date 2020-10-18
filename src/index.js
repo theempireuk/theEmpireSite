@@ -21,7 +21,7 @@ const Index = () => {
     useEffect(() => {
         if (!active) setActiveInterval(setTimeout(() => setActive(true), zoomTime+1000))
         if (active) clearInterval(activeInterval)
-    }, [active, setActive])
+    }, [active, setActive, activeInterval])
 
     const labelProps = useSpring({ opacity: active ? 1 : 0 })
     const headlineProps = useSpring({ opacity: active ? 0 : 1 })

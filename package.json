@@ -1,8 +1,8 @@
 {
-  "name": "react-three-fiber-react-spring",
+  "name": "theempire",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Partners in domination of the World Wide Web.",
+  "keywords": ["theEmpire", "the", "empire", "partners", "in", "domination", "of", "world", "wide", "web"],
   "main": "src/index.js",
   "dependencies": {
     "drei": "^1.5.7",
