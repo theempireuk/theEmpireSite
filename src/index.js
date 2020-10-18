@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 // A THREE.js React renderer, see: https://github.com/drcmda/react-three-fiber
 import { Canvas } from 'react-three-fiber'
 // A React animation lib, see: https://github.com/react-spring/react-spring
-import { useSpring, useTransition, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 // Animated typing effect library for landing view text
 import ReactTypingEffect from 'react-typing-effect';
 
