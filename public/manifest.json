@@ -1,10 +1,10 @@
 {
-    "name": "theEmpire",
+    "name": "theEmpire.dev",
     "short_name": "theEmpire",
-    "description": "Intergalactic web & software services.",
+    "description": "Partners in domination of the World Wide Web.",
     "display": "standalone",
     "icons": [{
-      "src": "logo.png",
+      "src": "/logo.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }]
