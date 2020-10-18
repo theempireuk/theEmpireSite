@@ -71,10 +71,10 @@ function Stars() {
 
 const Space = ({ active, setActive, zoomTime, landingSequence }) => {
     let [zoomed, setZoomed] = useState(false)
-    let initialPos = { x: 0, y: -1000, z: -1000 }
-    let endPos = { x: 0, y: 0, z: 5 }
-    let timer = zoomTime
-    let percentZoomed = 0
+    let initialPos = useMemo(() => ({ x: 0, y: -1000, z: -1000 }), [])
+    let endPos = useMemo(() => ({ x: 0, y: 0, z: 5 }), [])
+    let timer = useMemo(() => zoomTime, [zoomTime])
+    let percentZoomed = useMemo(() => 0, [])
 
     useFrame(({ camera }, delta) => {
         if (!zoomed) {

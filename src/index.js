@@ -19,7 +19,7 @@ const Index = () => {
     const zoomTime = 15000
 
     useEffect(() => {
-        if (!active) setActiveInterval(setTimeout(() => setActive(true), zoomTime+1000))
+        if (!active && activeInterval) setActiveInterval(setTimeout(() => setActive(true), zoomTime+1000))
         if (active) clearInterval(activeInterval)
     }, [active, setActive, activeInterval])
 
