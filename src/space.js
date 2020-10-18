@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect, useMemo } from 'react'
 import * as THREE from 'three/src/Three'
-// A THREE.js React renderer, see: https://github.com/drcmda/react-three-fiber
 import { useFrame } from 'react-three-fiber'
-// A React animation lib, see: https://github.com/react-spring/react-spring
 import { useSpring, animated } from 'react-spring/three'
+import { OrbitControls } from 'drei'
 
 function Planet({ active, setActive, landingSequence }) {
     const planet = useRef()
@@ -54,9 +53,10 @@ function Planet({ active, setActive, landingSequence }) {
 
 function Stars() {
     const [geo, mat, vertices, coords] = useMemo(() => {
+        const starCount = 250
         const geo = new THREE.SphereBufferGeometry(1, 10, 10)
         const mat = new THREE.MeshBasicMaterial({ color: new THREE.Color('white') })
-        const coords = new Array(500).fill().map((i) => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400])
+        const coords = new Array(starCount).fill().map((i) => [Math.random() * 800 - 400, Math.random() * 800 - 400, Math.random() * 800 - 400])
         return [geo, mat, vertices, coords]
     }, [])
 
@@ -69,13 +69,37 @@ function Stars() {
     )
 }
 
-const Space = ({ active, setActive, landingSequence }) => (
-    <>
+const Space = ({ active, setActive, zoomTime, landingSequence }) => {
+    let [zoomed, setZoomed] = useState(false)
+    let initialPos = useMemo(() => ({ x: 0, y: -1000, z: -1000 }))
+    let endPos = useMemo(() => ({ x: 0, y: 0, z: 5 }))
+    let timer = useMemo(() => zoomTime)
+    let percentZoomed = useMemo(() => 0)
+
+    useFrame(({ camera }, delta) => {
+        if (!zoomed) {
+            timer -= delta * 1000
+            if (timer <= 0) {
+                camera.position.set(endPos.x, endPos.y, endPos.z)
+                setZoomed(true)
+            } else {
+                percentZoomed = 1 - timer/zoomTime
+                camera.position.set(
+                    endPos.x - initialPos.x * (percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1),
+                    endPos.y - initialPos.y * (percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1),
+                    endPos.z - initialPos.z * (percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1)*(percentZoomed-1)
+                )
+            }
+        }
+    })
+    
+    return <>
+        <OrbitControls enableZoom={false}/>
         <ambientLight color="lightblue" />
         <pointLight color="white" intensity={1} position={[10, 10, 10]} />
         <Planet active={active} setActive={setActive} landingSequence={landingSequence} />
         <Stars />
     </>
-)
+}
 
 export default Space
