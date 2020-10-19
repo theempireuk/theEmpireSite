@@ -4,7 +4,7 @@ import { useFrame } from 'react-three-fiber'
 import { useSpring, animated } from 'react-spring/three'
 import { OrbitControls } from 'drei'
 
-function Planet({ active, setActive, landingSequence }) {
+function Planet({ zoomed, active, setActive, landingSequence }) {
     const planet = useRef()
     const satellite = useRef()
     const [rotationSpeed, setRotationSpeed] = useState(0.2)   
@@ -37,14 +37,14 @@ function Planet({ active, setActive, landingSequence }) {
         <group ref={planet}>
         <animated.mesh
             onClick={landingSequence}
-            onPointerOver={(e) => setActive(true)}
-            onPointerOut={(e) => setActive(false)}
+            onPointerOver={(e) => zoomed ? setActive(true) : null}
+            onPointerOut={(e) => zoomed ? setActive(false) : null}
             {...planetProps}>
             <mesh ref={satellite}>
                 <icosahedronGeometry attach="geometry" args={[0.1, 2]} />
                 <meshStandardMaterial attach="material" color="blue" wireframe />
             </mesh>
-            <icosahedronGeometry attach="geometry" args={[0.8, 2]} />
+            <icosahedronGeometry attach="geometry" args={[1, 2]} />
             <meshStandardMaterial attach="material" color="red" wireframe />
         </animated.mesh>
         </group>
@@ -69,12 +69,19 @@ function Stars() {
     )
 }
 
-const Space = ({ active, setActive, zoomTime, landingSequence }) => {
-    let [zoomed, setZoomed] = useState(false)
+const Space = ({ active, setActive, setActived, zoomTime, timer, landingSequence }) => {
+    const [zoomed, setZoomed] = useState(false)
     let initialPos = useMemo(() => ({ x: 0, y: -1000, z: -1000 }), [])
     let endPos = useMemo(() => ({ x: 0, y: 0, z: 5 }), [])
-    let timer = useMemo(() => zoomTime, [zoomTime])
     let percentZoomed = useMemo(() => 0, [])
+
+    useEffect(() => {
+        if (active) setTimeout(() => setActived(true), 500)
+    }, [active, setActived])
+
+    useEffect(() => {
+        if (zoomed) setActive(true)
+    }, [zoomed, setActive])
 
     useFrame(({ camera }, delta) => {
         if (!zoomed) {
@@ -97,7 +104,7 @@ const Space = ({ active, setActive, zoomTime, landingSequence }) => {
         <OrbitControls enableZoom={false}/>
         <ambientLight color="lightblue" />
         <pointLight color="white" intensity={1} position={[10, 10, 10]} />
-        <Planet active={active} setActive={setActive} landingSequence={landingSequence} />
+        <Planet zoomed={zoomed} active={active} setActive={setActive} landingSequence={landingSequence} />
         <Stars />
     </>
 }

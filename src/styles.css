@@ -29,6 +29,7 @@ body {
 /* individual stylings */
 #nav { z-index: 2; position: fixed; top: 10px; right: 10px; display: flex; flex-direction: column; align-items: flex-end; }
 #nav-menu { display: flex; flex-direction: column; list-style-type: none; padding: 0; margin: 0; }
+#nav-menu a { color: hotpink; background-color: #0b0b12; }
 #nav-menu h4, #nav-menu p { padding: 0px; margin: 10px; }
 
 #headline {
@@ -38,6 +39,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+}
+
+.headline-text {
+  font-size: 1.4rem;
+  color: rgb(0, 184, 40);
 }
 
 #label {

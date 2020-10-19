@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import React, { useState, useEffect } from 'react'
+import React, { useMemo, useState } from 'react'
 // A THREE.js React renderer, see: https://github.com/drcmda/react-three-fiber
 import { Canvas } from 'react-three-fiber'
 // A React animation lib, see: https://github.com/react-spring/react-spring
@@ -15,14 +15,11 @@ import { stages } from './stages'
 
 const Index = () => {
     const [active, setActive] = useState(false)
-    const [activeInterval, setActiveInterval] = useState()
-    const zoomTime = 15000
+    const [actived, setActived] = useState(false)
+    const [zoomTime, ] = useState(20000)
+    let timer = useMemo(() => zoomTime, [zoomTime]) 
 
-    useEffect(() => {
-        if (!active && activeInterval) setActiveInterval(setTimeout(() => setActive(true), zoomTime+1000))
-        if (active) clearInterval(activeInterval)
-    }, [active, setActive, activeInterval])
-
+    const headlineText = [ "Welcome traveller...", "to theEmpire.dev.", "Your partner in domination...", "of the World Wide Web." ]
     const labelProps = useSpring({ opacity: active ? 1 : 0 })
     const headlineProps = useSpring({ opacity: active ? 0 : 1 })
 
@@ -35,18 +32,18 @@ const Index = () => {
         <>
             <Nav />
             <Canvas>
-                <Space active={active} setActive={setActive} zoomTime={zoomTime} landingSequence={landingSequence} />
+                <Space active={active} setActive={setActive} actived={actived} setActived={setActived} zoomTime={zoomTime} timer={timer} landingSequence={landingSequence} />
             </Canvas>
             <animated.div id="headline" style={headlineProps}>
-                <ReactTypingEffect 
-                    text={[ "Welcome traveller", "to theEmpire.dev.", "Your partner in domination", "of the World Wide Web." ]} 
-                    cursorRenderer={cursor => <h1 style={{ color: 'rgb(0, 184, 40)' }}>{cursor}</h1>}
-                    displayTextRenderer={text => <h1 style={{ color: 'rgb(0, 184, 40)' }}>{text}</h1>}  
-                    speed={50}
-                    eraseSpeed={25}
-                    eraseDelay={1000}
-                    typingDelay={1000}
-                />
+                {!actived ? <ReactTypingEffect 
+                    text={headlineText} 
+                    cursorRenderer={cursor => <p className="headline-text">{cursor}</p>}
+                    displayTextRenderer={text => <p id="headline-text" className="headline-text">{text}</p>}  
+                    speed={40}
+                    eraseSpeed={50}
+                    eraseDelay={900}
+                    typingDelay={900}
+                /> : <p className="headline-text">theEmpire.dev</p>}
             </animated.div>
             <animated.div id="label" style={labelProps}>
                 <h2>Planet LV2D3V</h2>

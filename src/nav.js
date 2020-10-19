@@ -11,7 +11,7 @@ const Nav = () => {
 
     return <div id="nav">
         <div style={{ display: "flex" }}>
-            <p>Navigation Systems Status: 100% | Warp Drive: Online</p>
+            <p>Navigations Status: 100%<br />Warp Drive: Online</p>
             <button className={`hamburger hamburger--squeeze ${isActive ? 'is-active' : null}`} onClick={handlePress}>
                 <span className="hamburger-box">
                 <span className="hamburger-inner"></span>
